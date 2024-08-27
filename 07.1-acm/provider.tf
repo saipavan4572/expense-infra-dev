@@ -10,7 +10,7 @@ terraform {
 
   backend "s3" {
     bucket = "pspkdevops-terraform-remote-state"    #bucketname created in aws
-    key    = "expense-terraform-vpn"     #key we can give any name but should be unique to application/project
+    key    = "expense-terraform-amc"     #key we can give any name but should be unique to application/project
     region = "us-east-1"
     dynamodb_table = "pspkdevops-terraform-lock"    # Dynamo db table name in aws
   }

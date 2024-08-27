@@ -18,3 +18,7 @@ variable "common_tags" {
 variable "zone_name" {
   default = "pspkdevops.online"
 }
+
+variable "zone_id" {
+  default = "Z093373829N4OKOHIDM5S"     ## Hosted zone id of Route53 hosted zone(pspkdevops.online)
+}
