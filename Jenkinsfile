@@ -9,6 +9,10 @@ pipeline {
         ansiColor('xterm')
     }
 
+    parameters {
+        choice(name: 'action', choices: ['Apply', 'Destroy'], description: 'Pick something')
+    }
+
 
     stages {
         stage('Init') {
@@ -37,10 +41,12 @@ pipeline {
                 ok "Yes, we should."
             }
             steps {
+                
                 sh """
                 cd 01-vpc
                 terraform apply -auto-approve
                 """
+
             }
         }
 
