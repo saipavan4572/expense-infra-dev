@@ -40,6 +40,7 @@ pipeline {
     post { 
         always { 
             echo 'I will always say Hello again!'
+            deleteDir()     // workspace has to be deleted after every build to avoid issues for next builds
         }
         success { 
             echo 'I will say Hello only when it is success!'
