@@ -81,7 +81,7 @@ module "db" {
 
 module "records" {
   source  = "terraform-aws-modules/route53/aws//modules/records"
-  version = "~> 3.0"
+  version = "~> 2.0"
 
   zone_name = var.zone_name
 
@@ -90,6 +90,7 @@ module "records" {
       name    = "db-${var.environment}"
       type    = "CNAME"
       ttl     = 1
+      allow_overwrite = true
       records = [
         module.db.db_instance_address
       ]
