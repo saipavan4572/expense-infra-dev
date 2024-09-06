@@ -5,16 +5,10 @@
   - expense-dev-backend
   - expense-dev-frontend
   - expense-dev-bastion
-  - expense-app-alb   ## backend alb(application load balancer)
+  - expense-dev-app-alb   ## backend alb(application load balancer)
   - expense-dev-vpn
-  - expense-dev-frontend
   - expense-dev-web-alb
 
-  vpn:
-  - name: vpn_public
-    desc: vpn accepting connections from public
-    source: public
-    port: 943, 443, 22, 1194
   db:
   - name: db_backend
     desc: db accespting connections from backend
@@ -90,6 +84,4 @@
     desc: vpn accepting connections from public
     source: public
     port: 943, 443, 22, 1194
-
-
 

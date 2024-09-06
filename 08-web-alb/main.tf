@@ -39,6 +39,7 @@ resource "aws_lb_listener" "https" {
   protocol          = "HTTPS"
   certificate_arn   = data.aws_ssm_parameter.acm_certificate_arn.value
   ssl_policy        = "ELBSecurityPolicy-2016-08"
+  ### we need to update the ssl_policy to the latest recommended policy in AWS.
 
 
   default_action {
