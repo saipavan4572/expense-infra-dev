@@ -18,9 +18,10 @@ pipeline {
         stage('Init') {
             steps {
                 sh 'echo This is Plan stage'
-                // sh """
-                // ls -ltr
-                // """
+                sh """
+                ls -ltr
+                """
+                
                 sh """
                  ls -ltr
                  cd 01-vpc
