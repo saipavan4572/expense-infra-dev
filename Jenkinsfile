@@ -18,14 +18,14 @@ pipeline {
         stage('Init') {
             steps {
                 sh 'echo This is Plan stage'
-                sh """
-                ls -ltr
-                """
                 // sh """
-                //  cd 01-vpc
-                //  terraform init -reconfigure
-
+                // ls -ltr
                 // """
+                sh """
+                 cd 01-vpc
+                 terraform init -reconfigure
+
+                """
             }
         }
         stage('Plan') {
