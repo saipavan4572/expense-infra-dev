@@ -228,6 +228,7 @@ resource "aws_security_group_rule" "bastion_public" {
 }
 
 ## backend  instance should have connection from CI tools (nexus, jenkis, sonarqube, scanners, etc,.)
+# added as part of Jenkins CICD
 resource "aws_security_group_rule" "backend_default_vpc" {
   type              = "ingress"
   from_port         = 22
